@@ -1,38 +1,249 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;padding: 0;box-sizing: border-box;
+}
+body{
+  overflow-x: hidden;
+}
+.html-body{
+  width: 100vw;
+  position: relative;
+}
+.navbar{
+  width: 100%;
+  background-color: rgb(77, 0, 110);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  position:sticky;
+  top: 0;
+  left: 0;
+}
+.navbar ul{
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.navbar ul li{
+  padding: 0.5em 1em;
+  font-size: 1.1em;
+  cursor: pointer;
+}
+.navbar ul li a{
+  color: white;
+  text-decoration: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar ul li:hover{
+  text-decoration: underline;
+}
+.profile img{
+  cursor: pointer;
+  width: 3em;
+  height: 3em;
+  border-radius: 50%;
+}
+.login-btn{
+  height: 3em;
+  width:  5em;
+  background-color: transparent;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1.5px solid white;
+  font-weight: bold;
+  margin-left: 0.5em;
+}
+.login-btn:hover{
+  color:  rgb(77, 0, 110);
+  background-color: white;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.login-screen{
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.login-container{
+  background-color: rgb(77, 0, 110);
   display: flex;
   flex-direction: column;
+  padding: 2em;
+  border-radius: 20px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+}
+.login-container h1{
+  color: white;
+}
+.login-container input{
+  padding: 1em;
+  border-radius: 20px;
+  text-align: center;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+.login-container *{
+  margin: 0.4em 0;
+}
+.login-container button{
+  padding: 1em;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  color: rgb(77, 0, 110);
+  font-weight: bold;
+  margin-top: 1.5em;
+}
+#redirect{
+  display: none;
+}
+.user-profile{
+  display: flex;
+  align-items: center;
+}
+.user-profile p{
+  margin-right: 1em;
+}
+.menu-btn{
+  background: transparent;
+  border: none;
+  display: none;
+}
+.menu-btn-icon{
+  transform: scale(1.2);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-leading{
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.navbar-leading h1{
+  margin-left: 0.2em;
+}
+.add-blog-btn{
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 1em;
+  font-size: 1em;
+  background-color: rgb(77, 0, 110);;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.addblog-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3em;
+}
+.addblog-container h1{
+  color: rgb(77, 0, 110);;
+}
+.addblog-container *{
+  margin-bottom: 1em;
+}
+.addblog-container input,.addblog-container textarea{
+  width: 90%;
+  padding: 1em;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  border: 1px solid grey;
+  outline: rgb(27, 27, 27);
+}
+.addblog-container button{
+  width: 90%;
+  background-color: rgb(77, 0, 110);;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  padding: 1em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.blogs-container{
+  width: 70%;
+  margin: 0 auto;
+}
+
+.blog-card{
+  width: 90%;
+  /* background-color: red; */
+  border: 2px solid purple;
+  border-radius: 20px;
+  margin: 2em auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:1em;
+}
+.blog-card img{
+  border-radius: 20px;
+  width: 100%;
+}
+.blog-card h2{
+  margin-top: 1em;
+  color: purple;
+} 
+.blog-card p{
+  margin-top: 0.5em;
+  text-align: justify;
+}
+.date-time{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.date-time span{
+  /* font-weight: bold; */
+  font-size: 0.8em;
+}
+.user-info-container{
+  text-align: center;
+  margin-top: 1em;
+}
+.users-main-container{
+  width: 90%;
+  margin: 0 auto;
+}
+.users-main-container ul{
+  list-style: none;
+}
+
+.users-main-container ul li{
+  border: 2px solid purple;
+  margin: 0.2em 0;
+  border-radius: 20px;
+  padding: 1em;
+  width: 100%;
+}
+
+.users-main-container ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .menu-btn{
+    display: block;
   }
-  to {
-    transform: rotate(360deg);
+  .navbar ul,.user-profile p{
+    display: none;
+  }
+  .blogs-container{
+    width: 100%;
   }
 }
